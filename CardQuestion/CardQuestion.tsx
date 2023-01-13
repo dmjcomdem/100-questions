@@ -63,18 +63,7 @@ export const CardQuestion: React.FC<CardProps> = ({ card, removeCard, active, to
                         {total - current} из {total}
                     </div>
                 </motion.div>
-            ) : (
-                <motion.div
-                  className={`${style.card} ${style.cardActive}`}
-                    initial={{
-                        scale: 1,
-                        rotate: `${current % 2 === 0 ? -3 : 3}deg`,
-                    }}
-                >
-                    <div className={style.logo} />
-                    {card.question}
-                </motion.div>
-            )}
+            ) : null }
         </>
     );
 };

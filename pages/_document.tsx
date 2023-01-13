@@ -13,13 +13,13 @@ export default function Document() {
                 <meta property="og:title" content="100 Вопросов" />
                 <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url"  content={process.env.DOMAIN} />
-                <meta property="og:image" content="cover.jpg" />
+                <meta property="og:image" content="./cover.jpg" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 Вопросов" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta name="twitter:site" content={process.env.DOMAIN} />
-                <meta name="twitter:image"  content="cover.jpg" />
+                <meta name="twitter:image"  content="./cover.jpg" />
             </Head>
             <body>
                 <Main />

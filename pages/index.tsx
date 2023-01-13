@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import { CardQuestion, type CardType, CardQuestionStart, CardError } from '../CardQuestion';
 
