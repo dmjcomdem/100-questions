@@ -75,7 +75,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     className={`${style.card} ${style.cardActive}`}
                     initial={{
                         scale: 0.9,
-                        rotate: -2
+                        rotate: -2,
+                        pointerEvents: 'none'
                     }}
                 >
                     <div className={style.logo} />
