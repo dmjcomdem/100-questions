@@ -11,12 +11,6 @@ export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
     const [leaveX, setLeaveX] = useState(0);
     const [leaveY, setLeaveY] = useState(0);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLeaveX(-20);
-        }, 1000);
-    }, []);
-
     const onDragEnd = (_e: any, info: PanInfo) => {
         if (info.offset.y < -100) {
             setLeaveY(-2000);
@@ -39,10 +33,12 @@ export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
                     initial={{
-                        scale: 1
+                        opacity: 0,
+                        scale: 0.9,
                     }}
                     animate={{
-                        x: leaveX
+                        opacity: 1,
+                        scale: 1,
                     }}
                     exit={{
                         x: leaveX,
@@ -59,12 +55,6 @@ export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
                 </motion.div>
             ) : (
                 <motion.div
-                    drag={true}
-                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                    onDragEnd={onDragEnd}
-                    initial={{
-                        scale: 1
-                    }}
                     animate={{
                         x: leaveX,
                         y: leaveY,

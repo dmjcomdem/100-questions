@@ -21,7 +21,7 @@ export default function QuestionStack({ questions: initialQuestions }: { questio
 
     return (
         <AnimatePresence>
-            {questions.map(question => (
+            {!isVisibleStartCard && questions.map(question => (
                 <QuestionCard
                     key={question.id}
                     question={question}
