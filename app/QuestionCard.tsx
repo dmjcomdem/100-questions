@@ -33,6 +33,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
             removeCard();
         }
     };
+
     return (
         <>
             {active ? (
@@ -42,18 +43,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     onDragEnd={onDragEnd}
                     initial={{
                         scale: 0.9,
-                        rotate: 2
+                        rotate: 2,
+                        pointerEvents: 'none'
                     }}
                     animate={{
                         scale: 1,
-                        rotate: 0
+                        rotate: 0,
+                        transitionEnd: {
+                            pointerEvents: 'auto'
+                        },
                     }}
                     exit={{
                         x: leaveX,
                         y: leaveY,
                         opacity: 0,
                         scale: 0.5,
-                        transition: { duration: 0.4 }
+                        transition: { duration: 0.4 },
+                        pointerEvents: 'none'
                     }}
                     className={`${style.card} ${style.cardActive}`}
                     style={{ boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 10px' }}
