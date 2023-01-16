@@ -1,62 +1,38 @@
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-}
-
-main {
-    min-height: 100vh;
     background-image: url("../public/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
 
-.app {
+main {
     position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 100vh;
-    width: 100vw;
-    color: #b3b3b3;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
-/*.card {*/
-/*    position: absolute;*/
-/*    width: 300px;*/
-/*    height: 440px;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    !*box-shadow: 0 0 10px rgba(0, 0, 0, 0.008);*!*/
-/*    border-radius: 20px;*/
-/*    padding: 2rem;*/
-/*    font-size: 14px;*/
-/*    line-height: 1.4;*/
-/*    border: 1px solid #f3f3f3;*/
-/*    background-color: #f9f9f9;*/
-/*    user-select: none;*/
-/*    cursor: grab;*/
-/*}*/
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 0;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
 
-/*.logo {*/
-/*    position: absolute;*/
-/*    top: 60px;*/
-/*    left: 40px;*/
-/*    background-image: url("../public/logo.svg");*/
-/*    background-repeat: no-repeat;*/
-/*    width: 130px;*/
-/*    height: 40px;*/
-/*}*/
-
-/*.limit {*/
-/*    position: absolute;*/
-/*    bottom: 60px;*/
-/*    right: 40px;*/
-/*    color: #b3b3b3;*/
-/*}*/
+@keyframes rotation {
+    100% {
+        transform: rotate(1turn);
+    }
+}

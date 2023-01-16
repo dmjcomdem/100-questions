@@ -1,21 +1,23 @@
 import { PanInfo, motion } from 'framer-motion';
-import React, { useEffect, useState } from "react";
-import style from './Card.module.css'
+import React, { useState } from 'react';
+import style from './QuestionCard.module.css';
 
-interface CardProps {
+export interface QuestionType {
+    id: number;
+    question: string;
+}
+
+export interface QuestionCardProps {
+    question: QuestionType;
     active: boolean;
+    currentIndex: number;
+    total: number;
     removeCard: () => void;
 }
 
-export const CardQuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
+export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, removeCard, currentIndex, total }) => {
     const [leaveX, setLeaveX] = useState(0);
     const [leaveY, setLeaveY] = useState(0);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setLeaveX(-20);
-        }, 1000)
-    }, [])
 
     const onDragEnd = (_e: any, info: PanInfo) => {
         if (info.offset.y < -100) {
@@ -40,10 +42,11 @@ export const CardQuestionStart: React.FC<CardProps> = ({ active, removeCard }) =
                     onDragEnd={onDragEnd}
                     initial={{
                         scale: 1,
+                        rotate: 2
                     }}
                     animate={{
                         scale: 1.06,
-                        x: leaveX,
+                        rotate: 0
                     }}
                     exit={{
                         x: leaveX,
@@ -56,26 +59,26 @@ export const CardQuestionStart: React.FC<CardProps> = ({ active, removeCard }) =
                     style={{ boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 10px' }}
                 >
                     <div className={style.logo} />
-
-                    Это приложение мы создали для того, чтобы вам было интересно открываться и узнавать друг друга
+                    <p>{question.question}</p>
+                    <div className={style.limitSize}>
+                        {currentIndex} из {total}
+                    </div>
                 </motion.div>
-            ) : <motion.div
-                drag={true}
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                onDragEnd={onDragEnd}
-                initial={{
-                    scale: 1
-                }}
-                animate={{
-                    x: leaveX,
-                    y: leaveY,
-                    opacity: 0,
-                    scale: 0.5,
-                    transition: { duration: 0.4 }
-                }}
-                className={`${style.card} ${style.cardActive}`}
-            >
-            </motion.div>}
+            ) : (
+                <motion.div
+                    className={`${style.card} ${style.cardActive}`}
+                    initial={{
+                        scale: 1,
+                        rotate: -2
+                    }}
+                >
+                    <div className={style.logo} />
+                    <p>{question.question}</p>
+                    <div className={style.limitSize}>
+                        {currentIndex} из {total}
+                    </div>
+                </motion.div>
+            )}
         </>
     );
 };

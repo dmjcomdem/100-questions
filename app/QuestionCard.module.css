@@ -9,12 +9,13 @@
     padding: 2rem;
     font-size: 14px;
     line-height: 1.4;
+    text-align: center;
+    user-select: none;
 }
 
 .cardActive {
     border: 1px solid #f3f3f3;
     background-color: #f9f9f9;
-    user-select: none;
     cursor: grab;
     overflow: hidden;
     color: black;
@@ -36,7 +37,18 @@
     height: 40px;
 }
 
-.limit {
+.logoBig {
+    position: absolute;
+    top: 90px;
+    left: 120px;
+    background-image: url('../public/logo.svg');
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 40px;
+    scale: 1.4;
+}
+
+.limitSize {
     position: absolute;
     bottom: 60px;
     right: 40px;

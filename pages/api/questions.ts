@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const shuffle = ([...arr]) => {
+const shuffle = <T,>([...arr]): T[] => {
     let m = arr.length;
     while (m) {
         const i = Math.floor(Math.random() * m--);
