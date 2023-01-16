@@ -19,13 +19,9 @@ export default function QuestionStack({ questions: initialQuestions }: { questio
         setIsVisibleStartCard(false);
     };
 
-    const viewQuestions = useMemo(() => {
-        return questions.slice(Math.max(questions.length - 2, 0), questions.length);
-    }, [questions]);
-
     return (
         <AnimatePresence>
-            {viewQuestions.map(question => (
+            {questions.map(question => (
                 <QuestionCard
                     key={question.id}
                     question={question}

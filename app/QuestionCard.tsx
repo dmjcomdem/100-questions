@@ -35,18 +35,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
     };
     return (
         <>
-            {active ? (
+            {active && (
                 <motion.div
                     drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
                     initial={{
-                        scale: 1,
-                        rotate: 2
+                        scale: .8,
                     }}
                     animate={{
-                        scale: 1.06,
-                        rotate: 0
+                        scale: 1,
                     }}
                     exit={{
                         x: leaveX,
@@ -57,20 +55,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     }}
                     className={`${style.card} ${style.cardActive}`}
                     style={{ boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 10px' }}
-                >
-                    <div className={style.logo} />
-                    <p>{question.question}</p>
-                    <div className={style.limitSize}>
-                        {currentIndex} из {total}
-                    </div>
-                </motion.div>
-            ) : (
-                <motion.div
-                    className={`${style.card} ${style.cardActive}`}
-                    initial={{
-                        scale: 1,
-                        rotate: -2
-                    }}
                 >
                     <div className={style.logo} />
                     <p>{question.question}</p>
