@@ -1,6 +1,7 @@
 import { PanInfo, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import style from './QuestionCard.module.css';
+import { useDragCard } from "./useDragCard";
 
 interface CardProps {
     active: boolean;
@@ -8,29 +9,14 @@ interface CardProps {
 }
 
 export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
-    const [leaveX, setLeaveX] = useState(0);
-    const [leaveY, setLeaveY] = useState(0);
+    const { leaveX, leaveY, setLeaveX, onDragEnd } = useDragCard(removeCard);
 
     useEffect(() => {
         setTimeout(() => {
             setLeaveX(-20);
         }, 1000);
-    }, []);
+    }, [setLeaveX]);
 
-    const onDragEnd = (_e: any, info: PanInfo) => {
-        if (info.offset.y < -100) {
-            setLeaveY(-2000);
-            removeCard();
-        }
-        if (info.offset.x > 100) {
-            setLeaveX(1000);
-            removeCard();
-        }
-        if (info.offset.x < -100) {
-            setLeaveX(-1000);
-            removeCard();
-        }
-    };
     return (
         <>
             {active ? (

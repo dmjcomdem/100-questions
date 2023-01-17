@@ -19,13 +19,15 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="og:title" content="100 Вопросов" />
                 <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/cover.jpg`} />
+                <meta property="og:image" content={`${process.env.DOMAIN}/social.jpg`} />
+                <meta property="og:image:width" content="1200"/>
+                <meta property="og:image:height" content="630"/>
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 Вопросов" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta name="twitter:site" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content={`${process.env.DOMAIN}/cover.jpg`} />
+                <meta name="twitter:image" content={`${process.env.DOMAIN}/social.jpg`} />
             </head>
             <body className={montserrat.className}>
                 <main>{children}</main>
