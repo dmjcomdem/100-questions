@@ -9,7 +9,7 @@ interface CardProps {
 }
 
 export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
-    const { leaveX, leaveY, setLeaveX, onDragEnd } = useDragCard(removeCard);
+    const { leaveX, leaveY, onDragEnd } = useDragCard(removeCard);
 
     // useEffect(() => {
     //     setTimeout(() => {

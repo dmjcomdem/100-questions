@@ -44,7 +44,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                         <div className={style.logo} />
                         <p>{question.question}</p>
                         <div className={style.limitSize}>
-                            {currentIndex} из {total}!
+                            {currentIndex} из {total}
                         </div>
                 </motion.div>
             ) : (
