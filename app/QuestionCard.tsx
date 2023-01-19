@@ -28,7 +28,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
-                    dragTransition={{ bounceDamping: 12, min: 6 }}
+                    dragTransition={{ bounceDamping: 12, min: 20 }}
                     animate={{
                         scale: 1,
                         y: 0,
