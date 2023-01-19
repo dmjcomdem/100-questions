@@ -1,7 +1,7 @@
 import QuestionsStack from './QuestionStack';
 
 const getQuestions = async () => {
-    const response = await fetch(`${process.env.DOMAIN}/api/questions`, { cache: 'reload' });
+    const response = await fetch(`${process.env.DOMAIN}/api/questions`, { cache: 'no-cache' });
     return response.json();
 };
 

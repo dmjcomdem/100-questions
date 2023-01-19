@@ -11,6 +11,7 @@
     line-height: 1.4;
     text-align: center;
     user-select: none;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 10px;
 }
 
 .cardActive {

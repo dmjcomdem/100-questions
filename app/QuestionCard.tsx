@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import style from './QuestionCard.module.css';
 import { useDragCard } from './useDragCard';
 
-export interface QuestionType {
+export interface Question {
     id: number;
     question: string;
 }
 
 export interface QuestionCardProps {
-    question: QuestionType;
+    question: Question;
     active: boolean;
     currentIndex: number;
     total: number;
@@ -23,20 +23,15 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
         <>
             {active ? (
                 <motion.div
+                    className={`${style.card} ${style.cardActive}`}
+                    whileTap={{ cursor: "grabbing" }}
                     drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
-                    initial={{
-                        scale: 0.9,
-                        rotate: 2,
-                        pointerEvents: 'none'
-                    }}
+                    dragTransition={{ bounceDamping: 12, min: 4 }}
                     animate={{
                         scale: 1,
-                        rotate: 0,
-                        transitionEnd: {
-                            pointerEvents: 'auto'
-                        }
+                        y: 0,
                     }}
                     exit={{
                         x: leaveX,
@@ -44,24 +39,21 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                         opacity: 0,
                         scale: 0.5,
                         transition: { duration: 0.4 },
-                        pointerEvents: 'none'
                     }}
-                    className={`${style.card} ${style.cardActive}`}
-                    style={{ boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 10px' }}
                 >
-                    <div className={style.logo} />
-                    <p>{question.question}</p>
-                    <div className={style.limitSize}>
-                        {currentIndex} из {total}
-                    </div>
+                        <div className={style.logo} />
+                        <p>{question.question}</p>
+                        <div className={style.limitSize}>
+                            {currentIndex} из {total}!
+                        </div>
                 </motion.div>
             ) : (
                 <motion.div
                     className={`${style.card} ${style.cardActive}`}
+                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     initial={{
                         scale: 0.9,
-                        rotate: -2,
-                        pointerEvents: 'none'
+                        y: 30,
                     }}
                 >
                     <div className={style.logo} />

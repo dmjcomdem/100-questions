@@ -42,7 +42,7 @@ const getQuestions = async () => {
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
     try {
         const questions = await getQuestions();
-        res.status(200).json(shuffle(questions));
+        res.status(200).json(questions);
     } catch (error) {
         res.status(500).json({ error: 'Error load questions' });
     }

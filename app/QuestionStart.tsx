@@ -11,11 +11,11 @@ interface CardProps {
 export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
     const { leaveX, leaveY, setLeaveX, onDragEnd } = useDragCard(removeCard);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLeaveX(-20);
-        }, 1000);
-    }, [setLeaveX]);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setLeaveX(-20);
+    //     }, 1000);
+    // }, [setLeaveX]);
 
     return (
         <>
@@ -38,16 +38,12 @@ export const QuestionStart: React.FC<CardProps> = ({ active, removeCard }) => {
                         transition: { duration: 0.4 }
                     }}
                     className={`${style.card} ${style.cardActive}`}
-                    style={{ boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 10px' }}
                 >
                     <div className={style.logoBig} />
                     <p>Это приложение мы создали для того, чтобы вам было интересно открываться и узнавать друг друга</p>
                 </motion.div>
             ) : (
                 <motion.div
-                    drag={true}
-                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                    onDragEnd={onDragEnd}
                     initial={{
                         scale: 1
                     }}
