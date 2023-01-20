@@ -21,7 +21,7 @@ export default function MainHeader() {
             <meta property="og:title" content="100 Вопросов" />
             <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
             <meta property="og:url" content={process.env.DOMAIN} />
-            <meta property="og:image" content="https://raw.githubusercontent.com/dmjcomdem/100-questions/main/public/social.jpg" />
+            <meta property="og:image" content="social.jpg" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
 
@@ -30,7 +30,7 @@ export default function MainHeader() {
             <meta name="twitter:site" content="@dmjcomdem" />
             <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
             <meta name="twitter:site" content={process.env.DOMAIN} />
-            <meta name="twitter:image" content="https://raw.githubusercontent.com/dmjcomdem/100-questions/main/public/social.jpg" />
+            <meta name="twitter:image" content="social.jpg" />
             <meta name="twitter:image:alt" content="Cover для приложения 100-questions" />
 
             <link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png" />
