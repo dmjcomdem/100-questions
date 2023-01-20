@@ -22,7 +22,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="og:title" content="100 Вопросов" />
                 <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content="social.jpg" />
+                <meta property="og:image" content={`${process.env.DOMAIN}/social.jpg`} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
 
@@ -31,7 +31,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="twitter:site" content="@dmjcomdem" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta name="twitter:site" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content="social.jpg" />
+                <meta name="twitter:image" content={`${process.env.DOMAIN}/social.jpg`} />
                 <meta name="twitter:image:alt" content="Cover для приложения 100-questions" />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png" />
@@ -41,7 +41,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <link rel="apple-touch-icon" href="favicon/favicon-512x512.png" />
                 <link rel="icon" type="image/svg+xml" href="favicon/any.svg" />
                 <link rel="shortcut icon" href="favicon/favicon.ico" />
-
+                <meta name="theme-color" content="#5D4BE1" />
                 <link rel="manifest" href="manifest.json" />
             </head>
             <body className={montserrat.className}>
