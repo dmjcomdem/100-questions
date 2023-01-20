@@ -24,28 +24,28 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
             {active ? (
                 <motion.div
                     className={`${style.card} ${style.cardActive}`}
-                    whileTap={{ cursor: "grabbing" }}
+                    whileTap={{ cursor: 'grabbing' }}
                     drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
                     dragTransition={{ bounceDamping: 12, min: 20 }}
                     animate={{
                         scale: 1,
-                        y: 0,
+                        y: 0
                     }}
                     exit={{
                         x: leaveX,
                         y: leaveY,
                         opacity: 0,
                         scale: 0.5,
-                        transition: { duration: 0.4 },
+                        transition: { duration: 0.4 }
                     }}
                 >
-                        <div className={style.logo} />
-                        <p>{question.question}</p>
-                        <div className={style.limitSize}>
-                            {currentIndex} из {total}
-                        </div>
+                    <div className={style.logo} />
+                    <p>{question.question}</p>
+                    <div className={style.limitSize}>
+                        {currentIndex} из {total}
+                    </div>
                 </motion.div>
             ) : (
                 <motion.div
@@ -53,7 +53,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     initial={{
                         scale: 0.9,
-                        y: 30,
+                        y: 30
                     }}
                 >
                     <div className={style.logo} />

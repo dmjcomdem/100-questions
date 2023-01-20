@@ -1,14 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const shuffle = <T,>([...arr]): T[] => {
-    let m = arr.length;
-    while (m) {
-        const i = Math.floor(Math.random() * m--);
-        [arr[m], arr[i]] = [arr[i], arr[m]];
-    }
-    return arr;
-};
-
 const getQuestions = async () => {
     const sheetId = process.env.SHEET_ID;
     const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
