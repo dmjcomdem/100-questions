@@ -22,7 +22,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="og:title" content="100 Вопросов" />
                 <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/api/og`} />
+                <meta property="og:image" content="social.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
 

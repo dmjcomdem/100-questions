@@ -34,7 +34,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                         y: 0,
                         pointerEvents: 'none',
                         transitionEnd: {
-                            pointerEvents: 'auto',
+                            pointerEvents: 'auto'
                         }
                     }}
                     exit={{
