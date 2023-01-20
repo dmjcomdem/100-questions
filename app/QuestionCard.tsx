@@ -28,17 +28,21 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     onDragEnd={onDragEnd}
-                    dragTransition={{ bounceDamping: 12, min: 20 }}
+                    dragTransition={{ bounceDamping: 10, min: 10 }}
+                    initial={{
+                        pointerEvents: 'none'
+                    }}
                     animate={{
                         scale: 1,
-                        y: 0
+                        y: 0,
+                        pointerEvents: 'auto'
                     }}
                     exit={{
                         x: leaveX,
                         y: leaveY,
                         opacity: 0,
                         scale: 0.5,
-                        transition: { duration: 0.4 }
+                        transition: { duration: 0.2 }
                     }}
                 >
                     <div className={style.logo} />
