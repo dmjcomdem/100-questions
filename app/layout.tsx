@@ -40,6 +40,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <link rel="icon" type="image/png" sizes="512x512" href="favicon/favicon-512x512.png" />
                 <link rel="apple-touch-icon" href="favicon/favicon-512x512.png" />
                 <link rel="icon" type="image/svg+xml" href="favicon/any.svg" />
+                <link rel="shortcut icon" href="favicon/favicon.ico" />
 
                 <link rel="manifest" href="manifest.json" />
             </head>

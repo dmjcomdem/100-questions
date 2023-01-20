@@ -11,7 +11,7 @@ const shuffle = <T,>([...arr]): T[] => {
 };
 
 const getQuestions = async () => {
-    const response = await fetch(`${process.env.DOMAIN}/api/questions`);
+    const response = await fetch(`${process.env.DOMAIN}/api/questions`, { cache: 'no-store', next: { revalidate: 0 } });
     const questions = await response.json();
     return shuffle<Question>(questions);
 };
