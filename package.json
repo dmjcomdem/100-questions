@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@ducanh2912/next-pwa": "^7.3.1",
         "@emotion/css": "11.10.5",
         "@emotion/react": "11.10.5",
         "@emotion/styled": "11.0.0",
