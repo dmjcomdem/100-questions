@@ -18,19 +18,20 @@ export default function MainHeader() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="100 Вопросов" />
-                <meta property="og:site_name" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+                <meta property="og:site_name" content="100 Вопросов" />
+                <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta property="og:url" content={process.env.DOMAIN} />
                 <meta property="og:image" content={`${process.env.DOMAIN}/social.jpg`} />
+                <meta property="og:image:type" content="image/jpeg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 Вопросов" />
-                <meta name="twitter:site" content="@dmjcomdem" />
+                <meta name="twitter:creator" content="@dmjcomdem" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta name="twitter:site" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content={`${process.env.DOMAIN}/social.jpg`} />
+                <meta name="twitter:image:src" content={`${process.env.DOMAIN}/social.jpg`} />
                 <meta name="twitter:image:alt" content="Cover для приложения 100-questions" />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png" />
