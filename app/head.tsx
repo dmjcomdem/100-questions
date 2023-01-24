@@ -29,7 +29,7 @@ export default function MainHeader() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 Вопросов" />
                 <meta name="twitter:creator" content="@dmjcomdem" />
-                <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+                <meta name="twitter:description" content="100 вопросов для вашего душевного общения" />
                 <meta name="twitter:site" content={process.env.DOMAIN} />
                 <meta name="twitter:image:src" content={`${process.env.DOMAIN}/social.jpg`} />
                 <meta name="twitter:image:alt" content="Cover для приложения 100-questions" />
