@@ -51,7 +51,6 @@ export default function MainHeader() {
 
             <link
                 rel="apple-touch-startup-image"
-                media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
                 href="splashscreen.png"
             />
 

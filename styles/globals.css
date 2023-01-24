@@ -7,6 +7,7 @@
 body {
     margin: 0;
     background-image: url("../public/bg.jpg");
+    background-color: #3d395f;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,5 +37,17 @@ main {
 @keyframes rotation {
     100% {
         transform: rotate(1turn);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 }
