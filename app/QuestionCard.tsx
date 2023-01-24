@@ -32,10 +32,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
                     animate={{
                         scale: 1,
                         y: 0,
-                        pointerEvents: 'none',
-                        transitionEnd: {
-                            pointerEvents: 'auto'
-                        }
                     }}
                     exit={{
                         x: leaveX,
@@ -54,10 +50,19 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, active, re
             ) : (
                 <motion.div
                     className={`${style.card} ${style.cardActive}`}
+                    drag={true}
                     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    dragTransition={{ bounceDamping: 10, min: 10 }}
                     initial={{
                         scale: 0.9,
                         y: 30
+                    }}
+                    exit={{
+                        x: leaveX,
+                        y: leaveY,
+                        opacity: 0,
+                        scale: 0.5,
+                        transition: { duration: 0.4 }
                     }}
                 >
                     <div className={style.logo} />
