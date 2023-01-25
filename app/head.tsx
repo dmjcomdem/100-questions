@@ -1,13 +1,3 @@
-import { ReactNode } from 'react';
-import { Montserrat } from '@next/font/google';
-import '../styles/globals.css';
-
-const montserrat = Montserrat({
-    weight: ['400'],
-    style: ['normal'],
-    subsets: ['cyrillic', 'latin']
-});
-
 export default function MainHeader() {
     return (
         <head>
@@ -17,9 +7,9 @@ export default function MainHeader() {
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="100 вопросов для вашего душевного общения" />
-            <meta property="og:title" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+            <meta property="og:type" content="article" />
+            <meta property="og:site_name" content="100 Вопросов" />
+            <meta property="og:title" content="Вопросы для вашего душевного общения" />
             <meta property="og:url" content={process.env.DOMAIN} />
             <meta property="og:image" content={`${process.env.DOMAIN}/social.jpg`} />
             <meta property="og:image:type" content="image/jpeg" />
