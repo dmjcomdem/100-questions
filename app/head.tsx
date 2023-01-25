@@ -7,9 +7,9 @@ export default function MainHeader() {
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <meta property="og:type" content="article" />
-            <meta property="og:site_name" content="100 Вопросов" />
-            <meta property="og:title" content="Вопросы для вашего душевного общения" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="100 вопросов для вашего душевного общения" />
+            <meta property="og:title" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
             <meta property="og:url" content={process.env.DOMAIN} />
             <meta property="og:image" content={`${process.env.DOMAIN}/social.jpg`} />
             <meta property="og:image:type" content="image/jpeg" />
@@ -39,10 +39,7 @@ export default function MainHeader() {
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-            <link
-                rel="apple-touch-startup-image"
-                href="splashscreen.png"
-            />
+            <link rel="apple-touch-startup-image" href="splashscreen.png" />
 
             <link rel="manifest" href="manifest.json" />
         </head>
