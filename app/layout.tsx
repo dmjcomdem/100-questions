@@ -22,12 +22,12 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg}`} />
+                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg`} />
                 <meta property="og:site_name" content="100 вопросов" />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:creator" content="@dmjcomdem" />
-                <meta property="twitter:image:src" content={`${process.env.DOMAIN}/preview.jpg}`} />
+                <meta property="twitter:image:src" content={`${process.env.DOMAIN}/preview.jpg`} />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="256x256" href="./favicon/favicon-256x256.png" />
