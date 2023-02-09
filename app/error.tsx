@@ -1,12 +1,7 @@
 'use client';
 import React from 'react';
-import style from './QuestionCard.module.css';
+import { ErrorCard } from '@/entities/ErrorCard';
 
-export default function Error() {
-    return (
-        <div className={`${style.card} ${style.cardError}`}>
-            <div className={style.logo} />
-            <p>Ошибка при инициализации приложения 🙁</p>
-        </div>
-    );
+export default function Error({ error, reset }: { error: Error; reset: () => void }) {
+    return <ErrorCard error={error} reset={reset} />;
 }

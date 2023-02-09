@@ -1,14 +1,7 @@
-import QuestionsStack from './QuestionStack';
-import type { Question } from './QuestionCard';
+import type { Question } from "@/shared/types";
+import { QuestionsStack } from '@/features/QuestionsStack';
+import { shuffle } from "@/shared/utils";
 
-const shuffle = <T,>([...arr]): T[] => {
-    let m = arr.length;
-    while (m) {
-        const i = Math.floor(Math.random() * m--);
-        [arr[m], arr[i]] = [arr[i], arr[m]];
-    }
-    return arr;
-};
 
 const getQuestions = async () => {
     const response = await fetch(`${process.env.DOMAIN}/api/questions`, { cache: 'no-store', next: { revalidate: 0 } });
