@@ -45,7 +45,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="apple-touch-fullscreen" content="yes" />
                 <meta name="apple-mobile-web-app-title" content="Expo" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
                 <link rel="apple-touch-startup-image" href="./splashscreen.png" />
 
