@@ -1,0 +1,9 @@
+.logo {
+    position: absolute;
+    inset: 80px auto;
+    background-image: url('../../public/logo.svg');
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 45px;
+    scale: 1.2;
+}

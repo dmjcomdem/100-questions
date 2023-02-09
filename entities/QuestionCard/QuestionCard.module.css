@@ -1,0 +1,14 @@
+.logo {
+    position: absolute;
+    inset: 70px auto auto 50px;
+    background-image: url('../../public/logo.svg');
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 45px;
+}
+
+.limitSize {
+    position: absolute;
+    inset: auto 40px 60px auto;
+    color: #b3b3b3;
+}
