@@ -1,10 +1,11 @@
 'use client';
 import { useMemo, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { QuestionCard, type Question } from './QuestionCard';
-import { QuestionStart } from './QuestionStart';
+import type { Question } from '@/shared/types';
+import { QuestionCard } from '@/entities/QuestionCard';
+import { StartCard } from '@/entities/StartCard';
 
-export default function QuestionStack({ questions: initialQuestions }: { questions: Question[] }) {
+export default function QuestionsStack({ questions: initialQuestions }: { questions: Question[] }) {
     const [questions, setQuestions] = useState(initialQuestions);
     const [isVisibleStartCard, setIsVisibleStartCard] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -35,7 +36,7 @@ export default function QuestionStack({ questions: initialQuestions }: { questio
                     removeCard={removeQuestionCard(question)}
                 />
             ))}
-            <QuestionStart active={isVisibleStartCard} removeCard={hiddenStartCard} />
+            <StartCard active={isVisibleStartCard} removeCard={hiddenStartCard} />
         </AnimatePresence>
     );
 }
