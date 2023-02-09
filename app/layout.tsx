@@ -12,22 +12,24 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="ru" translate="no">
             <head>
-                <title>100 Вопросов</title>
+                <title>100 вопросов для вашего душевного общения</title>
                 <meta name="description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
 
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+                <meta property="og:url" content="https://100-questions.vercel.app/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
-                <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg`} />
-                <meta property="og:site_name" content="100 вопросов" />
-                <meta property="og:locale" content="ru_RU" />
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:creator" content="@dmjcomdem" />
-                <meta property="twitter:image:src" content={`${process.env.DOMAIN}/preview.jpg`} />
+                <meta property="og:image" content="https://100-questions.vercel.app/preview.jpg" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="100-questions.vercel.app" />
+                <meta property="twitter:url" content="https://100-questions.vercel.app/" />
+                <meta name="twitter:title" content="100 вопросов для вашего душевного общения" />
+                <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+                <meta name="twitter:image" content="https://100-questions.vercel.app/preview.jpg" />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="256x256" href="./favicon/favicon-256x256.png" />
