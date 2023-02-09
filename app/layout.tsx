@@ -18,18 +18,15 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <title>100 вопросов для вашего душевного общения</title>
                 <meta name="description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
 
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="100 вопросов для вашего душевного общения" />
-                <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
-                <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg`} />
-
-                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 вопросов для вашего душевного общения" />
+                <meta property="twitter:title" content="100 вопросов для вашего душевного общения" />
+                <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
-                <meta property="twitter:domain" content="100-questions.vercel.app" />
-                <meta property="twitter:url" content={process.env.DOMAIN} />
+                <meta property="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+                <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
+                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg`} />
                 <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.jpg`} />
+                <meta name="twitter:card" content="summary_large_image" />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="256x256" href="./favicon/favicon-256x256.png" />
