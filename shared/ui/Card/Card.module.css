@@ -12,8 +12,7 @@
     text-align: center;
     user-select: none;
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: white;
     cursor: grab;
-    color: black;
-    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }

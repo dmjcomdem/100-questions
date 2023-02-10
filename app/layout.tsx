@@ -22,14 +22,14 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/preview.jpg`} />
+                <meta property="og:image" content={`${process.env.DOMAIN}/preview.png`} />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 вопросов для вашего душевного общения" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="twitter:domain" content="100-questions.vercel.app" />
                 <meta property="twitter:url" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.jpg`} />
+                <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.png`} />
 
                 <link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="256x256" href="./favicon/favicon-256x256.png" />
@@ -45,7 +45,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                 <link rel="apple-touch-startup-image" href="./splashscreen.png" />
 
-                <meta name="theme-color" content="#5D4BE1" />
+                <meta name="theme-color" content="#B5AEDF" />
 
                 <link rel="manifest" href="./manifest.json" />
             </head>

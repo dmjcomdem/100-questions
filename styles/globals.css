@@ -6,12 +6,30 @@
 
 body {
     margin: 0;
-    background-image: url("../public/bg.jpg");
-    background-color: #3d395f;
-    background-repeat: no-repeat;
+    background-color: hsl(240deg 20% 16%);
+    background-image:
+            linear-gradient(
+            140deg,
+            hsl(250deg 49% 80%) 0%,
+            hsl(249deg 38% 75%) 17%,
+            hsl(248deg 31% 70%) 25%,
+            hsl(247deg 25% 65%) 31%,
+            hsl(247deg 21% 60%) 37%,
+            hsl(246deg 18% 55%) 42%,
+            hsl(245deg 15% 50%) 47%,
+            hsl(244deg 16% 45%) 53%,
+            hsl(244deg 17% 40%) 58%,
+            hsl(243deg 17% 35%) 63%,
+            hsl(242deg 18% 30%) 69%,
+            hsl(241deg 18% 25%) 75%,
+            hsl(241deg 19% 21%) 83%,
+            hsl(240deg 20% 16%) 100%
+    );
+    background-repeat:  no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    color: #4c5777;
     overscroll-behavior: contain;
 }
 
