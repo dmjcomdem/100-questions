@@ -31,7 +31,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="twitter:url" content={process.env.DOMAIN} />
                 <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.png`} />
 
-                <link rel="apple-touch-icon" href="./favicon/icon-512x512.png" />
+                <link rel="apple-touch-icon" href="./favicon/icon-192x192.png" />
                 <link rel="icon" type="image/svg+xml" href="./favicon/any.svg" />
                 <link rel="shortcut icon" href="./favicon/favicon.ico" />
 
@@ -41,7 +41,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                 <link rel="apple-touch-startup-image" href="./splashscreen.png" />
 
-                <meta name="theme-color" content="#B5AEDF" />
+                {/*<meta name="theme-color" content="#B5AEDF" />*/}
 
                 <link rel="manifest" href="./manifest.json" />
             </head>
