@@ -13,7 +13,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         <html lang="ru" translate="no">
             <head>
                 <meta charSet="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="viewport" content="width=device-width; initial-scale=1; viewport-fit=cover" />
 
                 <title>100 вопросов для вашего душевного общения</title>
                 <meta name="description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
@@ -43,7 +43,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
 
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-touch-fullscreen" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Expo" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
