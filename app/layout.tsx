@@ -31,11 +31,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="twitter:url" content={process.env.DOMAIN} />
                 <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.png`} />
 
-                <link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
-                <link rel="icon" type="image/png" sizes="256x256" href="./favicon/favicon-256x256.png" />
-                <link rel="icon" type="image/png" sizes="384x384" href="./favicon/favicon-384x384.png" />
-                <link rel="icon" type="image/png" sizes="512x512" href="./favicon/favicon-512x512.png" />
-                <link rel="apple-touch-icon" href="./favicon/favicon-512x512.png" />
+                <link rel="apple-touch-icon" href="./favicon/icon-512x512.png" />
                 <link rel="icon" type="image/svg+xml" href="./favicon/any.svg" />
                 <link rel="shortcut icon" href="./favicon/favicon.ico" />
 
