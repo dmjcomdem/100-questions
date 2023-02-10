@@ -1,1 +1,1 @@
-export {default as QuestionsStack} from './QuestionsStack'
+export { default as QuestionsStack } from './QuestionsStack';

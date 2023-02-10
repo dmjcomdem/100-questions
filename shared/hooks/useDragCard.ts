@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState } from 'react';
 import { PanInfo } from 'framer-motion';
 
 export const useDragCard = (removeCard: () => void) => {
@@ -21,7 +21,7 @@ export const useDragCard = (removeCard: () => void) => {
                 removeCard();
             }
         };
-    }, [removeCard])
+    }, [removeCard]);
 
     return {
         leaveX,

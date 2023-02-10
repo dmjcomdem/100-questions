@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { ReactNode } from 'react';
 import { motion, type PanInfo, Variants } from 'framer-motion';
 import style from './Card.module.css';

@@ -1,1 +1,1 @@
-export * from './ErrorCard'
+export * from './ErrorCard';

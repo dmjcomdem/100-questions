@@ -1,1 +1,1 @@
-export * from './StartCard'
+export * from './StartCard';

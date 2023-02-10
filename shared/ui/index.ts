@@ -1,2 +1,2 @@
-export * from './Card/Card'
-export * from './Spinner/Spinner'
+export * from './Card/Card';
+export * from './Spinner/Spinner';

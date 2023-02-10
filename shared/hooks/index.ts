@@ -1,1 +1,1 @@
-export * from './useDragCard'
+export * from './useDragCard';
