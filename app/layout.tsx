@@ -41,7 +41,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                 <link rel="apple-touch-startup-image" href="./splashscreen.png" />
 
-                {/*<meta name="theme-color" content="#B5AEDF" />*/}
+                <meta name="theme-color" content="#B5AEDF" />
 
                 <link rel="manifest" href="./manifest.json" />
             </head>
