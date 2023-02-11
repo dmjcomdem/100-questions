@@ -3,7 +3,7 @@ import { Montserrat } from '@next/font/google';
 import '../styles/globals.css';
 
 const montserrat = Montserrat({
-    weight: ['400'],
+    weight: ['500'],
     style: ['normal'],
     subsets: ['cyrillic', 'latin']
 });
@@ -31,9 +31,9 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta property="twitter:url" content={process.env.DOMAIN} />
                 <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.png`} />
 
-                <link rel="apple-touch-icon" href="./favicon/icon-192x192.png" />
+                <link rel="shortcut icon" href="./favicon/favicon.ico" sizes="any"/>
                 <link rel="icon" type="image/svg+xml" href="./favicon/any.svg" />
-                <link rel="shortcut icon" href="./favicon/favicon.ico" />
+                <link rel="apple-touch-icon" href="./favicon/icon-512x512.png" />
 
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-touch-fullscreen" content="yes" />
@@ -42,7 +42,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <link rel="apple-touch-startup-image" href="./splashscreen.png" />
 
                 <meta name="theme-color" content="#b5aedf" />
-
                 <link rel="manifest" href="./manifest.json" />
             </head>
             <body className={montserrat.className}>

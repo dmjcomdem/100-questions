@@ -29,8 +29,9 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    color: #4c5777;
+    color: #2f364a;
     overscroll-behavior: contain;
+    font-weight: 500;
 }
 
 main {
