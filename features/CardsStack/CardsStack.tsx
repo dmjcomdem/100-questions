@@ -1,5 +1,5 @@
 'use client';
-import { useId, useRef, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Question } from '@/shared/types';
 import { StartCard } from '@/entities/StartCard';
@@ -10,7 +10,7 @@ import styles from './CardsStack.module.css';
 
 export default function CardsStack({ questions: initialQuestions }: { questions: Question[] }) {
     const [questions, setQuestions] = useState(initialQuestions);
-    const viewQuestions = useRef(questions.slice(-2));
+    const [viewQuestions, setViewQuestions] = useState(questions.slice(-2));
     const [history, setHistory] = useState<Question[]>([]);
     const [isVisibleStartCard, setIsVisibleStartCard] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -19,7 +19,9 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
     const activeQuestion = questions.at(-1);
 
-    viewQuestions.current = questions.slice(Math.max(questions.length - 2, 0), questions.length);
+    useEffect(() => {
+        setViewQuestions(questions.slice(Math.max(questions.length - 2, 0), questions.length));
+    }, [questions]);
 
     const removeQuestionCard = (oldCard: Question) => () => {
         setQuestions(current => current.filter(card => card !== oldCard));
@@ -46,7 +48,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
             <div className={styles.cards}>
                 <AnimatePresence>
                     <LastCard active={isVisibleLastCard} key={useId()} />
-                    {viewQuestions.current.map(question => (
+                    {viewQuestions.map(question => (
                         <QuestionCard
                             key={question.id}
                             question={question}

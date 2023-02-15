@@ -13,6 +13,7 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ variants: variants, onDragEnd, className, children }) => {
     return (
         <motion.div
+            layout="position"
             className={`${style.card} ${className ? className : null}`}
             variants={variants}
             initial="initial"

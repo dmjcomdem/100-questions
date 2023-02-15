@@ -37,6 +37,12 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question, active, removeCa
         initial: {
             scale: 0.9,
             y: 30
+        },
+        exit: {
+            x: leaveX,
+            y: leaveY,
+            opacity: 0,
+            scale: 0.5
         }
     };
 
