@@ -1,5 +1,5 @@
 'use client';
-import { useId, useState } from 'react';
+import { useCallback, useId, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Question } from '@/shared/types';
 import { StartCard } from '@/entities/StartCard';
@@ -13,6 +13,9 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const [history, setHistory] = useState<Question[]>([]);
     const [isVisibleStartCard, setIsVisibleStartCard] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(1);
+
+    const [, updateState] = useState({});
+    const forceUpdate = useCallback(() => updateState({}), []);
 
     const activeQuestion = questions.at(-1);
     const viewQuestions = questions.slice(Math.max(questions.length - 2, 0), questions.length);
@@ -32,6 +35,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
             setHistory(current => current.filter(item => item !== question));
             setQuestions(item => [...item, question]);
             setCurrentIndex(prevIndex => prevIndex - 1);
+            forceUpdate();
         }
     };
 
