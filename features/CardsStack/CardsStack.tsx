@@ -1,5 +1,5 @@
 'use client';
-import { useId, useMemo, useState } from 'react';
+import { useId, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Question } from '@/shared/types';
 import { StartCard } from '@/entities/StartCard';
@@ -15,9 +15,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const [currentIndex, setCurrentIndex] = useState(1);
 
     const activeQuestion = questions.at(-1);
-    const viewQuestions = useMemo(() => {
-        return questions.slice(Math.max(questions.length - 3, 0), questions.length);
-    }, [questions]);
+    const viewQuestions = questions.slice(Math.max(questions.length - 3, 0), questions.length);
     const isVisibleLastCard = questions.length === 0;
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
 
@@ -32,7 +30,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
 
         if (question) {
             setHistory(current => current.filter(item => item !== question));
-            setQuestions(item => [...item, question]);
+            setQuestions(structuredClone([...questions, question]));
             setCurrentIndex(prevIndex => prevIndex - 1);
         }
     };
