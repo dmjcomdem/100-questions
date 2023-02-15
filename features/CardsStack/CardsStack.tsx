@@ -15,7 +15,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const [currentIndex, setCurrentIndex] = useState(1);
 
     const activeQuestion = questions.at(-1);
-    const viewQuestions = questions.slice(Math.max(questions.length - 2, 0), questions.length);
+    const viewQuestions = questions.slice(Math.max(questions.length - 1, 0), questions.length);
     const isVisibleLastCard = questions.length === 0;
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
 
