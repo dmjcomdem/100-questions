@@ -1,0 +1,18 @@
+.layout {
+    display: grid;
+    place-items: center;
+    grid-template-rows: max-content 1fr;
+    gap: 2rem;
+}
+
+.cards {
+    position: relative;
+    width: 300px;
+    height: 440px;
+}
+
+.action {
+    min-height: 40px;
+}
+
+

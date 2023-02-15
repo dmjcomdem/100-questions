@@ -1,5 +1,5 @@
 'use client';
-import React, { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import { motion, type PanInfo, Variants } from 'framer-motion';
 import style from './Card.module.css';
 
@@ -10,7 +10,7 @@ interface CardProps {
     className?: string;
 }
 
-export const Card: React.FC<CardProps> = ({ variants: variants, onDragEnd, className, children }) => {
+export const Card: FC<CardProps> = ({ variants: variants, onDragEnd, className, children }) => {
     return (
         <motion.div
             className={`${style.card} ${className ? className : null}`}

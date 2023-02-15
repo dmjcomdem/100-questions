@@ -1,0 +1,23 @@
+.button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:focus-visible {
+    background-color: hsl(0 0% 0% / 0.1);
+    box-shadow: 0 0 10px hsl(0 0% 0% / 0.2)
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}

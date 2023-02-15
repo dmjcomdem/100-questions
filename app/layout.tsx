@@ -15,23 +15,23 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
 
-                <title>100 вопросов для вашего душевного общения</title>
+                <title>Вопросы для вашего душевного общения</title>
                 <meta name="description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
 
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="100 вопросов для вашего душевного общения" />
                 <meta property="og:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="og:url" content={process.env.DOMAIN} />
-                <meta property="og:image" content={`${process.env.DOMAIN}/preview.png`} />
+                <meta property="og:image" content={`${process.env.DOMAIN}/media/preview.png`} />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 вопросов для вашего душевного общения" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
                 <meta property="twitter:domain" content="100-questions.vercel.app" />
                 <meta property="twitter:url" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content={`${process.env.DOMAIN}/preview.png`} />
+                <meta name="twitter:image" content={`${process.env.DOMAIN}/media//preview.png`} />
 
-                <link rel="shortcut icon" href="./favicon/favicon.ico" sizes="any"/>
+                <link rel="shortcut icon" href="./favicon/favicon.ico" sizes="any" />
                 <link rel="icon" type="image/svg+xml" href="./favicon/any.svg" />
                 <link rel="apple-touch-icon" href="./favicon/icon-512x512.png" />
 
@@ -39,7 +39,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="apple-touch-fullscreen" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-                <link rel="apple-touch-startup-image" href="./splashscreen.png" />
+                <link rel="apple-touch-startup-image" href="./media/splashscreen.png" />
 
                 <meta name="theme-color" content="#b5aedf" />
                 <link rel="manifest" href="./manifest.json" />
