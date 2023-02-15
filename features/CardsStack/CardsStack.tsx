@@ -35,7 +35,9 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
             setHistory(current => current.filter(item => item !== question));
             setQuestions(item => [...item, question]);
             setCurrentIndex(prevIndex => prevIndex - 1);
-            forceUpdate();
+            setTimeout(() => {
+                forceUpdate();
+            }, 400);
         }
     };
 
