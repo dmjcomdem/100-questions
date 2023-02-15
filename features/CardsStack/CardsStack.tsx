@@ -14,7 +14,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const [isVisibleStartCard, setIsVisibleStartCard] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(1);
 
-    const activeQuestion = questions.at(-1);
+    const activeQuestionID = questions.at(-1)?.id;
     const viewQuestions = questions.slice(Math.max(questions.length - 2, 0), questions.length);
     const isVisibleLastCard = questions.length === 0;
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
@@ -29,7 +29,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
         const question = history.at(-1);
 
         if (question) {
-            setHistory(current => current.filter(item => item !== question));
+            setHistory(current => current.filter(item => item.id !== question.id));
             setQuestions(item => [...item, question]);
             setCurrentIndex(prevIndex => prevIndex - 1);
         }
@@ -48,7 +48,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
                         <QuestionCard
                             key={question.id}
                             question={question}
-                            active={question === activeQuestion}
+                            active={question.id === activeQuestionID}
                             currentIndex={currentIndex}
                             total={initialQuestions.length}
                             removeCard={removeQuestionCard(question)}
