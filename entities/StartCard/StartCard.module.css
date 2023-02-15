@@ -7,3 +7,71 @@
     height: 65px;
     scale: 1.2;
 }
+
+.swipeUp {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translate(-50%, 0);
+}
+
+.swipeUp::before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: '';
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transform: translate(-50%, 40px) scale(0.5, 0.5);
+    background-color: hsla(246, 18%, 55%, 0.8);
+    animation: swipe-up 1.5s 2s linear;
+    animation-iteration-count: 3;
+}
+
+@keyframes swipe-up {
+    0% {
+        transform: translate(-50%, 40px) scale(0.5, 0.5);
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        transform: translate(-50%, 20px) scale(0.4, 0.65);
+        animation-timing-function: ease-out;
+    }
+    20% {
+        transform: translate(-50%, 0px) scale(0.6, 0.4);
+        animation-timing-function: ease;
+    }
+    30% {
+        transform: translate(-50%, 0px) scale(0.5, 0.5);
+        animation-timing-function: ease-in;
+        opacity: 1;
+        filter: blur(0px);
+    }
+    50% {
+        transform: translate(-50%, 0px) scale(0.9, 0.9);
+        opacity: 0.4;
+        filter: blur(1px);
+    }
+    65% {
+        transform: translate(-50%, 20px) scale(1, 1.2);
+        filter: blur(1px);
+        opacity: 0.3;
+    }
+    80% {
+        transform: translate(-50%, 40px) scale(1.05, 0.95);
+        animation-timing-function: ease-out;
+        opacity: 0.4;
+        filter: blur(1px);
+    }
+    100% {
+        transform: translate(-50%, 40px) scale(0.5, 0.5);
+        opacity: 0;
+        filter: blur(0px);
+    }
+}

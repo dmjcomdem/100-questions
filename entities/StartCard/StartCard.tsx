@@ -40,6 +40,7 @@ export const StartCard: FC<CardProps> = ({ active, removeCard }) => {
                 <Card variants={variantFront} onDragEnd={onDragEnd}>
                     <div className={styles.logo} />
                     <p>Это приложение мы создали для того, чтобы вам было интересно открываться и узнавать друг друга</p>
+                    <div className={styles.swipeUp} />
                 </Card>
             ) : (
                 <Card variants={variantBack} />
