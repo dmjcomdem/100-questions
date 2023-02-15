@@ -19,11 +19,11 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question, active, removeCa
     const variantFront: Variants = {
         initial: {
             scale: 0.9,
-            y: 30
+            opacity: 0
         },
         animate: {
             scale: 1,
-            y: 0
+            opacity: 1
         },
         exit: {
             x: leaveX,
@@ -48,18 +48,13 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question, active, removeCa
 
     return (
         <>
-            {active ? (
+            {active && (
                 <Card variants={variantFront} onDragEnd={onDragEnd}>
                     <div className={styles.logo} />
                     <p>{question.question}</p>
                     <div className={styles.limitSize}>
                         {question.id} |{currentIndex} из {total}
                     </div>
-                </Card>
-            ) : (
-                <Card variants={variantBack}>
-                    <div className={styles.logo} />
-                    <p>{question.question}</p>
                 </Card>
             )}
         </>
