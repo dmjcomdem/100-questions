@@ -17,14 +17,6 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
     const isVisibleLastCard = questions.length === 0;
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
 
-    const activeQuestion = useMemo(() => {
-        return questions.at(-1);
-    }, [questions]);
-
-    let viewQuestions = useMemo(() => {
-        return questions.slice(Math.max(questions.length - 2, 0), questions.length);
-    }, [questions]);
-
     const removeQuestionCard = (oldCard: Question) => () => {
         setQuestions(current => current.filter(card => card !== oldCard));
         setCurrentIndex(prevIndex => prevIndex + 1);
@@ -36,10 +28,18 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
 
         if (question) {
             setHistory(current => current.filter(item => item !== question));
-            setQuestions(item => [...item, question]);
             setCurrentIndex(prevIndex => prevIndex - 1);
+            setQuestions(item => [...item, question]);
         }
     };
+
+    const activeQuestion = useMemo(() => {
+        return questions.at(-1);
+    }, [questions]);
+
+    let viewQuestions = useMemo(() => {
+        return questions.slice(Math.max(questions.length - 2, 0), questions.length);
+    }, [questions]);
 
     const hiddenStartCard = () => {
         setIsVisibleStartCard(false);
