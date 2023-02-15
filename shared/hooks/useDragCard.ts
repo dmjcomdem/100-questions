@@ -12,16 +12,16 @@ export const useDragCard = (removeCard: () => void) => {
                 removeCard();
                 return;
             }
-            if (info.offset.x > 100) {
-                setLeaveX(1000);
-                removeCard();
-                return;
-            }
-            if (info.offset.x < -100) {
-                setLeaveX(-1000);
-                removeCard();
-                return;
-            }
+            // if (info.offset.x > 100) {
+            //     setLeaveX(1000);
+            //     removeCard();
+            //     return;
+            // }
+            // if (info.offset.x < -100) {
+            //     setLeaveX(-1000);
+            //     removeCard();
+            //     return;
+            // }
         };
     }, [removeCard]);
 
