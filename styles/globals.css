@@ -29,14 +29,14 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    color: #2f364a;
+    color: hsl(224, 22%, 24%);
     overscroll-behavior: contain;
     font-weight: 500;
 }
 
 main {
-    position: relative;
     display: grid;
     place-items: center;
     min-height: 100vh;
+    min-height: 100dvh;
 }

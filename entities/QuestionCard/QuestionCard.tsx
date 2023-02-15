@@ -17,6 +17,10 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question, active, removeCa
     const { leaveX, leaveY, onDragEnd } = useDragCard(removeCard);
 
     const variantFront: Variants = {
+        initial: {
+            scale: 0.9,
+            y: 30
+        },
         animate: {
             scale: 1,
             y: 0

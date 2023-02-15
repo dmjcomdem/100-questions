@@ -1,7 +1,7 @@
 .logo {
     position: absolute;
     inset: 70px auto;
-    background-image: url('../../public/logo.svg');
+    background-image: url('../../public/img/logo.svg');
     background-repeat: no-repeat;
     width: 125px;
     height: 65px;

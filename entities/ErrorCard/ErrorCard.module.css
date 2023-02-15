@@ -2,8 +2,9 @@
     position: absolute;
     top: 90px;
     left: 120px;
-    background-image: url('../../public/logo.svg');
+    background-image: url('../../public/img/logo.svg');
     background-repeat: no-repeat;
+    background-size: contain;
     width: 130px;
     height: 40px;
     scale: 1.4;
