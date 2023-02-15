@@ -53,7 +53,7 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question, active, removeCa
                     <div className={styles.logo} />
                     <p>{question.question}</p>
                     <div className={styles.limitSize}>
-                        {currentIndex} из {total}
+                        {question.id} |{currentIndex} из {total}
                     </div>
                 </Card>
             ) : (
