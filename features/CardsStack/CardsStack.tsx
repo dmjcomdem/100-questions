@@ -44,7 +44,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
             <div className={styles.cards}>
                 <AnimatePresence>
                     <LastCard active={isVisibleLastCard} key={useId()} />
-                    {viewQuestions.map(question => (
+                    {questions.map(question => (
                         <QuestionCard
                             key={question.id}
                             question={question}
