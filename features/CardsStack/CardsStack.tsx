@@ -1,9 +1,7 @@
 'use client';
-import { useId, useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Question } from '@/shared/types';
-import { StartCard } from '@/entities/StartCard';
-import { LastCard } from '@/entities/LastCard';
 import { QuestionCard } from '@/entities/QuestionCard';
 import { UndoCardButton } from './components/UndoCardButton';
 import styles from './CardsStack.module.css';
@@ -43,7 +41,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
         <div className={styles.layout}>
             <div className={styles.cards}>
                 <AnimatePresence>
-                    <LastCard active={isVisibleLastCard} key={useId()} />
+                    {/*<LastCard active={isVisibleLastCard} key={useId()} />*/}
                     {viewQuestions.map(question => (
                         <QuestionCard
                             key={question.id}
@@ -54,7 +52,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
                             removeCard={removeQuestionCard(question)}
                         />
                     ))}
-                    <StartCard active={isVisibleStartCard} removeCard={hiddenStartCard} />
+                    {/*<StartCard active={isVisibleStartCard} removeCard={hiddenStartCard} />*/}
                 </AnimatePresence>
             </div>
             <div className={styles.action}>
