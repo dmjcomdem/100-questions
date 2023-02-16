@@ -14,6 +14,10 @@
     touch-action: none;
 }
 
+.button:disabled {
+    cursor: not-allowed;
+}
+
 .button svg {
     position: absolute;
     inset: 0;
