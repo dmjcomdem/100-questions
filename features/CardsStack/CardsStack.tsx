@@ -68,9 +68,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
                 </AnimatePresence>
             </div>
             <div className={styles.action}>
-                <AnimatePresence>
-                    <UndoCardButton active={isVisibleUndoAction} disabled={disabledUndoButton} onClick={undoQuestion} />
-                </AnimatePresence>
+                <UndoCardButton active={isVisibleUndoAction} disabled={disabledUndoButton} onClick={undoQuestion} />
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 'use client';
 import { type FC } from 'react';
-import { motion, type Variants } from 'framer-motion';
+import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import styles from './UndoCardButton.module.css';
 
 interface CardProps {
@@ -28,13 +28,12 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
             rotate: '-90deg'
         },
         exit: {
-            y: -20,
             opacity: 0
         }
     };
 
     return (
-        <>
+        <AnimatePresence>
             {active && (
                 <motion.button
                     type="button"
@@ -57,6 +56,6 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
                     </svg>
                 </motion.button>
             )}
-        </>
+        </AnimatePresence>
     );
 };
