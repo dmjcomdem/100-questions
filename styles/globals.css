@@ -40,7 +40,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-blend-mode: overlay;
+        background-blend-mode: difference;
     }
 }
 
