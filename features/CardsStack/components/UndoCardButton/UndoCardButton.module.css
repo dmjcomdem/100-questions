@@ -18,10 +18,6 @@
     cursor: not-allowed;
 }
 
-.button:is(:focus, :focus-visible) {
-    background-color: hsl(0deg 0% 16%);
-}
-
 .button svg {
     position: absolute;
     inset: auto;
