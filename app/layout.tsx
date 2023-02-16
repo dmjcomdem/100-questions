@@ -40,6 +40,8 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <link rel="apple-touch-startup-image" href="./media/splashscreen.png" />
 
                 <meta name="theme-color" content="#b5aedf" />
+                <meta name="color-scheme" content="dark light" />
+
                 <link rel="manifest" href="./manifest.json" />
             </head>
             <body className={montserrat.className}>
