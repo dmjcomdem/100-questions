@@ -1,26 +1,28 @@
 <p align="center">
   <img src="./public/img/logo.svg" alt="100 Вопросов" width="300" >
 </p>
-<p align="center">
+<div align="middle">
   100 вопросов для вашего душевного общения
   <br />
-  <a href="https://100-questions.vercel.app/"> <strong>100-questions.vercel.app &rarr;</strong> </a>
-<p>
+  <a href="https://100-questions.vercel.app/"> 
+    <img src="./public/favicon/any.svg" alt="100 Вопросов" width="16">
+    <strong>100-questions.vercel.app &rarr;</strong>
+  </a>
+</div>
 
 
-## Основаная идея
+## Основаная идея  
 Приложение «100 Вопросов» создано для того, чтобы лучше узнать друг друга и провести время в интересной и продуктивной беседе. В приложении содержится вопросы, которые позволяют погрузиться в глубокие и значимые разговоры с друзьями и близкими людьми. Вопросы затрагивают разные темы, включая мечты и цели, любовь и отношения, дружбу, смысл жизни, счастье, прошлое, настоящее и будущее, и многое другое.
 
 
 ## Технологии
 Приложение написано на основе [Next.js (v13)](https://nextjs.org/), с использованием [TypeScript](https://www.typescriptlang.org/) и 
-[PWA](https://web.dev/progressive-web-apps/). Для структуры используется [Feature-Sliced Design](https://feature-sliced.design/) архитектура. 
+[PWA](https://web.dev/progressive-web-apps/). Для структуры используется [Feature-Sliced Design](https://feature-sliced.design/) архитектура. Список вопросов запращиваются через API методы Google Таблицы.
   
 #### Реализованы следующие функции:
 - При каждой загрузке меняется порядок вопросов;
 - Минималистичный дизайн для использования на мобильных устройствах;
 - Возможность добавить как отдельное приложение на телефон или Windows/MacOS
 - Возможность работать в офлайн режиме, без подключения к Интернету.
-
 
 [RPReplay_Final1676544538.webm](https://user-images.githubusercontent.com/3313640/219345525-7d51c9ae-9a9d-40a5-adac-865cc6e7a18e.webm)
