@@ -1,6 +1,6 @@
 'use client';
 import { type FC } from 'react';
-import { AnimatePresence, motion, type Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import styles from './UndoCardButton.module.css';
 
 interface CardProps {
@@ -33,7 +33,7 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
     };
 
     return (
-        <AnimatePresence>
+        <>
             {active && (
                 <motion.button
                     type="button"
@@ -44,7 +44,7 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
                     whileHover="hover"
                     whileTap="click"
                     exit="exit"
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.3 }}
                     onClick={onClick}
                     disabled={disabled}
                 >
@@ -56,6 +56,6 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
                     </svg>
                 </motion.button>
             )}
-        </AnimatePresence>
+        </>
     );
 };
