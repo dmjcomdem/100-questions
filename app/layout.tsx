@@ -27,8 +27,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="100 вопросов для вашего душевного общения" />
                 <meta name="twitter:description" content="Приложение для того, чтобы вам было интересно открываться и узнавать друг друга" />
-                <meta name="twitter:image" content={process.env.DOMAIN} />
-                <meta name="twitter:image" content={`${process.env.DOMAIN}/media//preview.png`} />
+                <meta name="twitter:image" content={`${process.env.DOMAIN}/media/preview.png`} />
 
                 <link rel="shortcut icon" href="./favicon/favicon.ico" sizes="any" />
                 <link rel="icon" type="image/svg+xml" href="./favicon/any.svg" />
