@@ -32,7 +32,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
 
         setTimeout(() => {
             setIsDisabledUndoButton(false);
-        }, 500);
+        }, 1000);
     };
 
     const undoQuestion = () => {
