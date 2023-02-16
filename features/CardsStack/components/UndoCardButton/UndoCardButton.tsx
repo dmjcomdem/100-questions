@@ -6,9 +6,10 @@ import styles from './UndoCardButton.module.css';
 interface CardProps {
     onClick: () => void;
     active: boolean;
+    disabled: boolean;
 }
 
-export const UndoCardButton: FC<CardProps> = ({ onClick, active }) => {
+export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => {
     const variants: Variants = {
         initial: {
             y: -20,
@@ -46,6 +47,7 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active }) => {
                     exit="exit"
                     transition={{ duration: 0.4 }}
                     onClick={onClick}
+                    disabled={disabled}
                 >
                     <svg width="23" height="22" viewBox="0 0 23 22">
                         <path

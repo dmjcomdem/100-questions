@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useState } from 'react';
+import { useId, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Question } from '@/shared/types';
 import { StartCard } from '@/entities/StartCard';
@@ -10,23 +10,25 @@ import styles from './CardsStack.module.css';
 
 export default function CardsStack({ questions: initialQuestions }: { questions: Question[] }) {
     const [questions, setQuestions] = useState(initialQuestions);
-    const [viewQuestions, setViewQuestions] = useState(questions.slice(-2));
     const [history, setHistory] = useState<Question[]>([]);
     const [isVisibleStartCard, setIsVisibleStartCard] = useState(true);
+    const [disabledUndoButton, setIsDisabledUndoButton] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(1);
 
+    const viewQuestions = questions.slice(Math.max(questions.length - 2, 0), questions.length);
+    const activeQuestion = questions.at(-1);
     const isVisibleLastCard = questions.length === 0;
     const isVisibleUndoAction = history.length >= 1 && history.length !== initialQuestions.length;
-    const activeQuestion = questions.at(-1);
-
-    useEffect(() => {
-        setViewQuestions(questions.slice(Math.max(questions.length - 2, 0), questions.length));
-    }, [questions]);
 
     const removeQuestionCard = (oldCard: Question) => () => {
+        setIsDisabledUndoButton(true);
         setQuestions(current => current.filter(card => card !== oldCard));
         setCurrentIndex(prevIndex => prevIndex + 1);
         setHistory(prev => [...prev, oldCard]);
+
+        setTimeout(() => {
+            setIsDisabledUndoButton(false);
+        }, 500);
     };
 
     const undoQuestion = () => {
@@ -63,7 +65,7 @@ export default function CardsStack({ questions: initialQuestions }: { questions:
             </div>
             <div className={styles.action}>
                 <AnimatePresence>
-                    <UndoCardButton active={isVisibleUndoAction} onClick={undoQuestion} />
+                    <UndoCardButton active={isVisibleUndoAction} disabled={disabledUndoButton} onClick={undoQuestion} />
                 </AnimatePresence>
             </div>
         </div>
