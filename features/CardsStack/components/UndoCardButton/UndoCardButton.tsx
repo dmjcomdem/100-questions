@@ -44,7 +44,7 @@ export const UndoCardButton: FC<CardProps> = ({ onClick, active, disabled }) => 
                     whileHover="hover"
                     whileTap="click"
                     exit="exit"
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4 }}
                     onClick={onClick}
                     disabled={disabled}
                 >
